@@ -112,8 +112,6 @@ export = defineRule({
         }
         const src = srcNode.value.value
         if (
-          src.startsWith('https://cdn.polyfill.io/v2/') ||
-          src.startsWith('https://polyfill.io/v3/')
         ) {
           const featureQueryString = new URL(src).searchParams.get('features')
           const featuresRequested = (featureQueryString || '').split(',')
